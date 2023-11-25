@@ -18,7 +18,7 @@ def geo_to_neighborhood(latitude, longitude):
         Union[str, None]: Name of the Pittsburgh neighborhood the point falls within or None if it does not fall within a neighborhood.
     """
     # Create a shapely point for the latitude and longitude
-    pt = Point(latitude, longitude)
+    pt = Point(longitude, latitude)
     # Loop through the neighborhoods
     for _idx, neighborhood in NEIGHBORHOODS.iterrows():
         # Check if this neighborhood contains the point
